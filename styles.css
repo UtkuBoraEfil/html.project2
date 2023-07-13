@@ -1,0 +1,154 @@
+body {
+  background-color: #36384d;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+@font-face {
+  font-family: robotobold;
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: robotoregular;
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+section {
+  background-color: white;
+  min-width: 60%;
+  min-height: auto;
+  margin: 5%;
+  border-radius: 5%;
+}
+
+.flex {
+  display: flex;
+  gap: 1em;
+}
+
+.left {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  padding: 5%;
+  padding-top: 0%;
+  padding-bottom: 10px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.right {
+  width: 100%;
+  min-height: 56vh;
+  overflow: hidden;
+  padding: 1rem;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  place-items: center;
+}
+
+.text {
+  text-align: left;
+  font-family: robotoregular;
+}
+
+.text h1 {
+  font-size: 350%;
+  margin-bottom: 0px;
+  font-family: robotobold !important;
+}
+
+ul {
+  list-style-image: url("./assets/images/icon-list.svg");
+}
+
+li {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.mail p {
+  font-size: small;
+}
+
+.form-control {
+  width: 98% !important;
+  min-height: 50px !important;
+  border-radius: 5%;
+}
+
+.btn {
+  width: 100% !important;
+  margin-top: 1rem;
+  min-height: 50px !important;
+  background-color: #242742 !important;
+  color: white !important;
+  border-radius: 5%;
+}
+
+.btn:hover {
+  transition: all 0.5s ease-out !important;
+  background: linear-gradient(to right, #ff6155, #ff6a3a) !important;
+}
+.img2 {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  section {
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+  }
+  .flex {
+    flex-direction: column-reverse;
+  }
+  .img {
+    display: none;
+  }
+  .img2 {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  .left {
+    padding: 0;
+  }
+  .right {
+    padding: 0;
+  }
+  .text {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .text h1 {
+    font-size: 300%;
+  }
+  ul {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  li {
+    padding-bottom: 5%;
+    font-size: 120%;
+  }
+  .btn {
+    height: 70px !important;
+    font-size: 120%;
+  }
+  .form-control {
+    width: 98% !important;
+    min-height: 70px !important;
+  }
+}
