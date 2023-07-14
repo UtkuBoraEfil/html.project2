@@ -1,9 +1,9 @@
 body {
   background-color: #36384d;
-  height: 100vh;
+  min-height: 100svh;
   display: grid;
   place-items: center;
-  margin: 0 !important;
+  margin: 0;
 }
 
 @font-face {
@@ -19,7 +19,7 @@ body {
 section {
   background-color: white;
   min-width: 60%;
-  min-height: auto;
+  /* min-height: auto; */
   margin: 5%;
   border-radius: 5%;
 }
@@ -27,43 +27,29 @@ section {
 .flex {
   display: flex;
   gap: 1em;
+  align-items: center;
 }
 
 .left {
-  position: relative;
   width: 100%;
-  min-height: auto;
-  padding: 5%;
-  padding-top: 0%;
-  padding-bottom: 10px;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
+  padding: 0 5% 10px;
 }
 
 .right {
   width: 100%;
-  min-height: 56vh;
-  overflow: hidden;
   padding: 1rem;
-  justify-self: center;
-  align-self: center;
-  display: grid;
 }
 
 .img {
-  width: 100%;
-  height: 100%;
-  place-items: center;
+  max-width: 100%;
 }
 
 .text {
-  text-align: left;
   font-family: robotoregular;
 }
 
 .text h1 {
-  font-size: 350%;
+  font-size: 3.5rem;
   margin-bottom: 0px;
   font-family: robotobold !important;
 }
@@ -73,42 +59,61 @@ ul {
 }
 
 li {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 1rem 0;
 }
 
 .mail p {
-  font-size: small;
+  font-size: 0.7rem;
+  font-family: robotobold;
 }
 
 .form-control {
-  width: 98% !important;
-  min-height: 50px !important;
-  border-radius: 5%;
+  width: 98%;
+  min-height: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #242742;
+  text-indent: 0.5rem;
+
+  font-family: robotobold;
+  font-size: 0.75rem;
+}
+
+input::placeholder {
+  font-family: robotoregular;
+  font-size: 0.7rem;
 }
 
 .btn {
-  width: 100% !important;
+  outline: none;
+  border: none;
+  width: 100%;
   margin-top: 1rem;
-  min-height: 50px !important;
-  background-color: #242742 !important;
-  color: white !important;
-  border-radius: 5%;
+  min-height: 50px;
+  /* background-color: #242742; */
+  background: linear-gradient(204.47deg, #242742 0%, #242742 100%);
+  color: white;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .btn:hover {
-  transition: all 0.5s ease-out !important;
-  background: linear-gradient(to right, #ff6155, #ff6a3a) !important;
+  /* background: linear-gradient(to right, #ff6155, #ff6a3a) !important; */
+  background: linear-gradient(204.47deg, #ff6a3a 0%, #ff527b 100%);
+  box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
 }
 .img2 {
   display: none;
 }
 
 @media (max-width: 500px) {
+  body {
+    background-color: white;
+  }
   section {
     width: 100%;
-    height: 100%;
-    border-radius: 0%;
+    border-radius: 0;
+    margin: 0 0 2.5rem 0;
   }
   .flex {
     flex-direction: column-reverse;
@@ -129,27 +134,24 @@ li {
     padding: 0;
   }
   .text {
-    padding-left: 6%;
-    padding-right: 6%;
+    padding: 0 6%;
   }
   .text h1 {
-    font-size: 300%;
+    font-size: 2.5rem;
   }
   ul {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 0 5%;
   }
 
   li {
     padding-bottom: 5%;
-    font-size: 120%;
+    font-size: 1rem;
   }
   .btn {
-    height: 70px !important;
-    font-size: 120%;
+    min-height: 3.5rem;
+    font-size: 1rem;
   }
   .form-control {
-    width: 98% !important;
-    min-height: 70px !important;
+    min-height: 3rem;
   }
 }

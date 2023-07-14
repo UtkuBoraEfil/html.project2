@@ -18,22 +18,11 @@
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
     <link rel="stylesheet" href="./styles.css" />
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <section>
       <div class="flex">
-        <div class="left" data-aos="fade-down-right">
+        <div class="left" data-aos="fade-down-right" data-aos-duration="1000">
           <div class="text">
             <h1>Stay updated!</h1>
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -44,7 +33,7 @@
                 <li>And much more!</li>
               </ul>
             </div>
-            <div class="mail">
+            <form class="mail" action="./page.html" method="get">
               <p>Email address</p>
               <div class="form-floating">
                 <input
@@ -52,21 +41,20 @@
                   class="form-control"
                   id="floatingInput"
                   placeholder="email@company.com"
+                  required
                 />
               </div>
-              <a href="./page.html">
-                <button
-                  type="button"
-                  class="btn btn-primary w-100 py-2"
-                  type="submit"
-                >
-                  Subscribe to monthly Newsletter
-                </button>
-              </a>
-            </div>
+              <button
+                type="submit"
+                class="btn btn-primary w-100 py-2"
+                type="submit"
+              >
+                Subscribe to monthly Newsletter
+              </button>
+            </form>
           </div>
         </div>
-        <div class="right" data-aos="fade-up-left">
+        <div class="right" data-aos="fade-up-left" data-aos-duration="1000">
           <img
             class="img"
             src="./assets/images/illustration-sign-up-desktop.svg"
