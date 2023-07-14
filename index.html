@@ -12,6 +12,8 @@
       href="./assets/images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
@@ -31,7 +33,7 @@
   <body>
     <section>
       <div class="flex">
-        <div class="left">
+        <div class="left" data-aos="fade-down-right">
           <div class="text">
             <h1>Stay updated!</h1>
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -52,13 +54,19 @@
                   placeholder="email@company.com"
                 />
               </div>
-              <button class="btn btn-primary w-100 py-2" type="submit">
-                Subscribe to monthly Newsletter
-              </button>
+              <a href="./page.html">
+                <button
+                  type="button"
+                  class="btn btn-primary w-100 py-2"
+                  type="submit"
+                >
+                  Subscribe to monthly Newsletter
+                </button>
+              </a>
             </div>
           </div>
         </div>
-        <div class="right">
+        <div class="right" data-aos="fade-up-left">
           <img
             class="img"
             src="./assets/images/illustration-sign-up-desktop.svg"
@@ -72,5 +80,9 @@
         </div>
       </div>
     </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

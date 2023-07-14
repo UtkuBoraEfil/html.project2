@@ -1,0 +1,87 @@
+body {
+  background-color: #36384d;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+@font-face {
+  font-family: robotobold;
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: robotoregular;
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+section {
+  background-color: white;
+  min-width: 35%;
+  max-width: 40%;
+  min-height: auto;
+  margin: 5%;
+  border-radius: 10%;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 6vw;
+  margin-bottom: 0px;
+  font-family: robotobold;
+}
+
+.box {
+  padding: 10%;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+  min-width: 100%;
+  min-height: 3.4rem;
+  color: white;
+  background-color: #242742;
+  margin-top: 4%;
+  border-radius: 8px;
+  font-size: 110%;
+  border: 0;
+}
+
+button::before {
+  transition: all 0.5s ease-out !important;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: all 0.5s ease-out !important;
+  background: linear-gradient(to right, #ff6155, #ff6a3a) !important;
+}
+
+@media (max-width: 500px) {
+  section {
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .box {
+    padding: 5%;
+    margin-top: 30%;
+  }
+  h1 {
+    font-size: 10vw;
+    margin-bottom: 40px;
+  }
+
+  p {
+    font-size: 120%;
+  }
+  button {
+    position: absolute;
+    bottom: 30px;
+    min-width: 80% !important;
+    margin: 0 auto;
+    width: 50% !important;
+  }
+}
